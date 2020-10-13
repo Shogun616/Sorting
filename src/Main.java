@@ -28,53 +28,68 @@ public class Main {
             int choice = scan.nextInt();
             scan.nextLine();
 
-            switch (choice) {
-                case 1 -> {
+            switch (choice){
+                case 1:
                     System.out.println("\n=============================");
                     System.out.println(" Books sorted by year ascending");
                     System.out.println("===============================");
                     books.sort(null);
-                    for (Book b : books) {
+
+                    for (Book b : books){
                         System.out.println(b);
                     }
-                }
-                case 2 -> {
+                    break;
+
+                case 2:
                     System.out.println("\n=============================");
                     System.out.println(" Book sorted by year descending");
                     System.out.println("===============================");
                     books.sort((b1, b2) -> b2.year - b1.year);
-                    for (Book b : books) {
+
+                    for (Book b : books){
                         System.out.println(b);
                     }
-                }
-                case 3 -> {
+                    break;
+
+                case 3:
                     System.out.println("\n=============================");
                     System.out.println(" Book sorted by title ascending");
                     System.out.println("===============================");
+
                     books.sort((b1, b2) -> b2.title.compareTo(b1.title));
-                    for (Book b : books) {
+
+                    for (Book b: books){
                         System.out.println(b);
                     }
-                }
-                case 4 -> {
+                    break;
+
+                case 4:
                     System.out.println("\n==============================");
                     System.out.println(" Book sorted by title descending");
                     System.out.println("================================");
+
                     books.sort((b1, b2) -> b2.title.compareTo(b1.title));
-                    for (Book b : books) {
+
+                    for (Book b : books){
                         System.out.println(b);
                     }
-                }
-                case 5 -> {
+                    break;
+
+                case 5:
                     System.out.println("\n==============================");
                     System.out.println(" Book sorted by price descending");
                     System.out.println("================================");
+
                     books.sort((b1, b2) -> b2.price.compareTo(b1.price));
-                    for (Book b : books) {
+
+                    for (Book b : books){
                         System.out.println(b);
                     }
-                }
-                case 0 -> loop = false;
+                    break;
+
+                case 0:
+                    loop = false;
+                    break;
             }
         }
     }
